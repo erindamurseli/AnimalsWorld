@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> Donate </title>
+<meta charset="utf-8">
+
+</head>
+<link rel="stylesheet" href="donate.css">
+
+<!--jQuery Events-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
+<script src="jquery-3.2.1.min.js"></script> 
+<script>
+$(document).ready(function() {
+
+
+$("input").focus(function() {
+$(this).css("background-color", " #ffffff"); 
+});
+
+
+$("input").blur(function() {
+$(this).css("background-color", "#ffcc66"); 
+});   
+
+});
+</script>
+
+
+
+<body>
+<header>
+<nav>
+<div id='active'>
+            <ul>
+			<li class='has-sub'><a href='index.html'><span>Home</span></a></li>
+            <li class='has-sub'><a href="mammals.html"><span>Mammals</span></a></li>
+            <li class='has-sub'><a href="insects.html"><span>Insects</span></a></li>
+            <li class='has-sub'><a href="birds.html"><span>Birds</span></a></li>
+		    <li class='has-sub'><a href="seaanimals.html"><span>Sea Animals</span></a></li>
+		    <li class='has-sub'><a href="reptiles.html"><span>Reptiles</span></a></li>
+			<li class='has-sub'><a href="contacts.html"><span>Contacts</span></a></li>
+            <li class='has-sub'><a href="donate.html">Donate</a></li>
+            </ul>
+			</div>
+</nav>
+</header>
+<hr>
+
+<form>
+
+<div id="donate">
+<svg width="500" height="95">
+   <circle cx="150" cy="40" r="30" fill="none" stroke="black" />
+   <circle cx="150" cy="40" r="17" fill="teal" />
+   <circle cx="150" cy="40" r="9" fill="black" />
+   <circle cx="140" cy="30" r="3" fill="white" />
+   
+   
+	<circle cx="230" cy="40" r="30" fill="none" stroke="black"/>
+	<circle cx="230" cy="40" r="17" fill="green"/>
+	<circle cx="230" cy="40" r="9" fill="black"/>
+	<circle cx="240" cy="30" r="3" fill="white"/>
+</svg>
+
+
+            <h1><u>Your donation to Animals</u></h1>
+			<p>First Name</br>
+            <input type="text" placeholder="First Name" class="ngjyra" id="FirstName" >
+			<p>Last Name</br>
+            <input type="text" placeholder="Last Name" class="ngjyra" id="LastName" >
+			<p>E-mail</br>
+            <input type="email" placeholder="E-mail" class="ngjyra" id="E-mail" >
+			
+			<p>Card number</br>
+			<input type="password" placeholder="Card number" class="ngjyra" id="CardNumber" >
+			<p>Repeat Card number</br>
+			<input type="password" placeholder="Card number" class="ngjyra" id="RepeatCardNumber" >
+			
+			<p>Expiration</br>
+			<input type="date" class="ngjyra" id="Expiration" >
+			
+			
+			<p>Country</br>
+			<select name="country" class="ngjyra"/>
+			<option value="Kosova">Kosova</option>
+			<option value="Albania">Albania</option>
+			<option value="Macedonia">Macedonia</option>
+			<option value="Canada">Canada</option>
+			<option value="UK">United Kingdom</option>
+			<option value="USA">United States of America</option>
+            </select></br>
+			
+			<p>City</br>
+			<select name="country" class="ngjyra">
+			<option value="Prishtina">Prishtina</option>
+			<option value="Tirana">Tirana</option>
+			<option value="Skopje">Skopje</option>
+			<option value="Ottawa">Ottawa</option>
+			<option value="London">London</option>
+			<option value="Washington DC">Washington D.C.</option>
+            </select></br>
+			
+			<p>Amount</br>
+            <input type="number" min="1" oninput="validity.valid||(value='');" placeholder="Your Donation" class="ngjyra" id="number">
+			
+			<p><small> We will make sure that your donation will directly go to <a href="http://bestfriends.org" target="_blank">Best Friends</a> organization for animals. </small></p>
+					
+            <br><button type="submit" value="submit" onclick="notEmptyandConfirm()">Donate</button></br>
+		
+</form>			
+</div>
+
+
+
+ <script type="text/javascript">
+            function notEmptyandConfirm() {
+                var name = document.getElementById('FirstName');
+                var surname = document.getElementById('LastName');
+                var email = document.getElementById('E-mail');
+				var exp = document.getElementById('Expiration');
+				var money = document.getElementById('number');
+				
+				var card1 = document.getElementById('CardNumber');
+			    var card2 = document.getElementById('RepeatCardNumber');
+				
+                if ((name, surname, email, exp, money, card1, card2).value!="" && card1.value == card2.value)
+                    alert("Your donate has been sent.");
+                else
+                    alert("Your card number doesn't match or you need to fill the gaps!")
+            }			
+    </script>	
+
+</body>
+</html>

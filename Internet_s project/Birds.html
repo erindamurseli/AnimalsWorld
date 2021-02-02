@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> Birds </title>
+<meta charset="utf-8">
+</head>
+<link rel="stylesheet" href="birds.css">
+<body>
+<header>
+<nav>
+<div id='active'>
+            <ul>
+			<li class='has-sub'><a href='animalsworld.html'><span>Home</span></a></li>
+            <li class='has-sub'><a href="mammals.html"><span>Mammals</span></a></li>
+            <li class='has-sub'><a href="insects.html"><span>Insects</span></a></li>
+            <li class='has-sub'><a href="birds.html"><span>Birds</span></a></li>
+		    <li class='has-sub'><a href="seaanimals.html"><span>Sea Animals</span></a></li>
+		    <li class='has-sub'><a href="reptiles.html"><span>Reptiles</span></a></li>
+			<li class='has-sub'><a href="contacts.html"><span>Contacts</span></a></li>
+            <li class='has-sub'><a href="donate.html"><span>Donate</span></a></li>
+            </ul>
+			</div>
+</nav>
+</header>
+<section>
+
+<hr>
+</section> 
+
+<!--ANIMACIONI-->
+			<div class="animacion2">
+			<img src="images\eagle1.png" width=400 height=300> 
+			</div>
+
+<!--Artikujt-->
+<article>
+<div class="Birds">
+			        <alt="birds"><h3>Eagle</h3>
+                    <img src="images\Eagle.jpg" width=400 height=200> 
+                    <p>When you think of eagles, you probably think of the bald eagle, a symbol of pride in America.
+                       Over 60 species of eagles live on the earth and only two of them live in the United States. 
+                       Most eagles live in Eurasia and Africa. Nine species live in Central and South America and 
+					   three species are found in Australia. The bald eagle, loved for its majestic appearance and 
+					   flight, was common in America three hundred years ago. By the 20th century, it had been hunted
+					   almost to extinction. The bald eagle has been protected since 1967 and is slowly making a comeback
+					   – good news for a beloved American bird.
+                    </p>    
+                    </div>
+					
+					
+<div class="Birds">
+			        <alt="birds"><h3>Ostriches</h3>
+                    <img src="images\Ostriches.jpg" width=400 height=200> 
+                    <p>
+                    When you think of birds, you probably think of the small, charming birds chirping in your backyard.
+					The ostrich, though, is bigger than your dad! Ostriches are the largest birds. They can grow 9 feet 
+					tall and weigh over 350 pounds. Ostriches live in the African savannah. They can’t fly, but they’re 
+					fast runners. They can run up to 43 miles per hour for short periods. Most of the time, they run at 
+					around 30 miles per hour. Ostriches eat seeds, plants and grain. They also munch on insects and small animals.
+                    </p>    
+                    </div>
+					
+<div class="Birds">
+			        <alt="birds"><h3>Parrot</h3>
+                    <img src="images\Parrot.jpg" width=400 height=200> 
+                    <p> You probably recognize large talking parrots found in some pet stores as parrots, 
+					but did you know parakeets, cockatiels and cockatoos are also types of parrots? There 
+					are over 350 kinds of parrots and they all live in warm places.Parrots live in rainforests 
+					and woodlands in Africa, Australia, Asia, Central America, and South America. Parrots have 
+					a special talent –they can imitate human speech. They’re not talking to communicate, but they 
+					can say words and even sing.
+
+                    </p>  
+                    </div>
+</article>
+
+<!--Audio-->				
+<div class="audio1">					
+<audio src="birdsound.mp3" controls> </audio> 
+</div>
+
+			
+					<aside>
+<!--Lista-->					
+<div id="listat">
+             <ul>
+             <li><span class="list">5 Birds In Danger Of Becoming Extinct</span>
+                    <ol>
+                        <li>Giant ibis</li>
+                        <li>California condor</li>
+                        <li>Kakapo</li>
+                        <li>Kagu</li>
+                        <li>Bengal florican</li>
+                    </ol>
+                    </li>
+                    <li><span class="list">5 Birds That Are Now Extinct</span>
+                        <ol>
+                            <li>Dodo</li>
+                            <li>Tasmanian Emu</li>
+                            <li>Carolina Parakeet</li>
+                            <li>Arabian Ostrich</li>
+                            <li>Bachman's Warbler</li>
+                        </ol>
+                    </li>
+                    <li><span class="list">5 Of The Coolest Birds  In The World</span>
+                        <ol>
+                            <li>The Rainbow Lorikeet</li>
+                            <li>The Golden Pheasant</li>
+                            <li>The Quetzal</li>
+                            <li>The Hoopoe</li>
+                            <li>The Bali Bird of Paradise</li>
+                        </ol>
+                    </li>
+                </ul>
+                </div>
+				
+<!--Replace-->				
+<div id="demo1">
+<p>Click the button to find out which other bird beside<b> Slender-billed curlew </b> has recently become extinct:</p>
+
+<p id="demo"><b>"Slender-billed curlew" </b> was last seen early first decade of the 21st century!</p>
+
+<button id="btn3" onclick="myFunction()">Click</button>
+
+<script>
+function myFunction() {
+    var  str= document.getElementById("demo").innerHTML; 
+    var res = str.replace( "Slender-billed curlew","Guadalupe storm petrel");
+    document.getElementById("demo").innerHTML = res;
+}
+</script>
+</div>
+				
+			
+</aside>
+				
+</body>
+
+</html>

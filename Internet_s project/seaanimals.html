@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title> Sea Animals </title>
+<meta charset="utf-8">
+
+<!--Session Storage-->
+<script type="text/javascript">
+        function dofirst() {
+            var button = document.getElementById("button");
+        button.addEventListener("click",justsave,false);
+        }
+		
+
+    function justsave()
+        {
+        var favorite=document.getElementById("favorite").value;
+        var reason=document.getElementById("reason").value;
+                sessionStorage.setItem(favorite,reason);
+                display(favorite);
+        }
+		
+    function display(favorite)
+    {
+    var thebox=document.getElementById("thebox");
+    var reason=sessionStorage.getItem(favorite);
+    thebox.innerHTML="Sea Food:" +favorite+"<br/> Why You Like It:" +reason;
+    }
+    window.addEventListener("load",dofirst,false);
+   
+    </script>
+
+</head>
+<link rel="stylesheet" href="seaanimals.css">
+<body>
+<header>
+<nav>
+<div id='active'>
+            <ul>
+			<li class='has-sub'><a href='index.html'><span>Home</span></a></li>
+            <li class='has-sub'><a href="mammals.html"><span>Mammals</span></a></li>
+            <li class='has-sub'><a href="insects.html"><span>Insects</span></a></li>
+            <li class='has-sub'><a href="birds.html"><span>Birds</span></a></li>
+		    <li class='has-sub'><a href="seaanimals.html"><span>Sea Animals</span></a></li>
+		    <li class='has-sub'><a href="reptiles.html"><span>Reptiles</span></a></li>
+			<li class='has-sub'><a href="contacts.html"><span>Contacts</span></a></li>
+			<li class='has-sub'><a href="donate.html"><span>Donate</span></a></li>
+            </ul>
+			</div>
+</nav>
+
+<!--Background-->
+
+<script> 
+function changeimg(){
+var currentTime = new Date().getHours();
+if ( currentTime> 6 && currentTime<9) {
+document.getElementById('sec1').style.backgroundImage="url(images/sunrise.jpg)";
+}
+else if ( currentTime>= 9 && currentTime<20) {
+document.getElementById('sec1').style.backgroundImage="url(images/daytime.jpg)";
+}
+else if ( currentTime> 20 && currentTime<24) {
+document.getElementById('sec1').style.backgroundImage="url(images/sunset.jpg)";
+}
+else {
+document.getElementById('sec1').style.backgroundImage="url(images/nighttime.jpg)";
+}
+}
+</script>
+</header>
+<hr>
+<section id="sec1">
+
+<!--Artikujt-->
+<article>
+<div class="seaanimals">
+			        <alt="seaanimals"><h3>Starfish</h3>
+                    <img src="images\Starfish.jpg" width=400 height=200> 
+                    <p>You probably know sea stars as starfish, the name sea stars are commonly known by. 
+					But sea stars aren’t really fish. Sea stars, like sea urchins and sand dollars, do not 
+					have backbones, which makes them part of a group called invertebrates. Fish have backbones,
+					which makes them vertebrates. Got it? Most sea stars sport spiny skin and five arms, 
+					although some can grow as many as 50 arms. The arms are covered with pincerlike organs and 
+					suckers that allow the animal to slowly creep along the ocean floor. Light-sensitive eyespots 
+					on the tips of the arms help the sea star find food. 
+Favorites on the menu include mollusks such as clams, oysters, and snails. The sea star eats by attaching to prey
+ and extending its stomach out through its mouth. Enzymes from the sea star’s stomach digest the prey. The digested
+ material enters the sea star’s stomach. Tiny organisms can be swallowed whole. Sea stars occupy every type of habitat,
+ including tidal pools, rocky shores, sea grass, kelp beds, and coral reefs. Some sea stars even live in sands as deep 
+ as 20,530 feet (9,000 meters). 
+Sea stars aren’t social creatures, but they will congregate in large groups during certain times of the year to feed.
+
+                    </p>    
+</div>
+<div class="animacion1">
+<img src="images\urchin.png" width=350 height=350> 
+</div>
+					
+					
+<div class="seaanimals">
+			        <alt="seaanimals"><h3>Seahorse</h3>
+                    <img src="images\Seahorse.jpg" width=400 height=200> 
+                    <p>
+                    Seahorses are tiny fishes that are named for the shape of their head, which looks like 
+					the head of a tiny horse. There are at least 25 species of seahorses. You’ll find them 
+					in the world’s tropical and temperate coastal waters, swimming upright among seaweed and 
+					other plants. Seahorses use their dorsal fins (back fins) to propel slowly forward. 
+					To move up and down, seahorses adjust the volume of air in their swim bladders, which is an air
+					pocket inside their bodies. 
+Tiny, spiny plates cover seahorses' bodies all the way down to their curled, flexible tails. The tail can grasp objects, 
+helpful when seahorses want to anchor themselves to vegetation. 
+A female seahorse lays dozens, sometimes hundreds, of eggs in a pouch on the male seahorse’s abdomen. Called a brood pouch,
+ it resembles a kangaroo’s pouch for carrying young. Seahorse young hatch after up to 45 days in the brood pouch. The baby seahorses, 
+ each about the size of a jelly bean, find other baby seahorses and float together in small groups, clinging to each other using their tails.
+ Unlike kangaroos, baby seahorses do not return to the pouch. They must find food and hide from predators as soon as they’re born.
+                    </p>    
+</div>
+					
+<div class="seaanimals">
+			        <alt="seaanimals"><h3>Octopus</h3>
+                    <img src="images\Octopus.jpg" width=400 height=200> 
+                    <p> Octopuses are sea animals famous for their rounded bodies, bulging eyes, 
+					and eight long arms. They live in all the world’s oceans but are especially 
+					abundant in warm, tropical waters. Octopuses, like their cousin, the squid, 
+					are often considered “monsters of the deep,” though some species, or types,
+					occupy relatively shallow waters.
+Most octopuses stay along the ocean’s floor, although some species are pelagic, which means they
+ live near the water’s surface. Other octopus species live in deep, dark waters, rising from below 
+ at dawn and dusk to search for food. Crabs, shrimps, and lobsters rank among their favorite foods, 
+ though some can attack larger prey, like sharks. Octopuses typically drop down on their prey from 
+ above and, using powerful suctions that line their arms, pull the animal into their mouth. The octopus
+ performs its famous backward swim by blasting water through a muscular tube on the body called a siphon. 
+ Octopuses also crawl along the ocean’s floor, tucking their arms into small openings to search for food. 
+ Seals, whales, and large fish prey on octopuses. 
+If threatened, octopuses shoot an inky fluid that darkens the water, confusing the aggressor. 
+The octopus can also change to gray, brown, pink, blue, or green to blend in with its surroundings. 
+Octopuses may also change color as a way to communicate with other octopuses. Octopuses are solitary 
+creatures that live alone in dens built from rocks, which the octopus moves into place using its powerful arms.
+ Octopuses sometimes even fashion a rock “door” for their den that pulls closed when the octopus is safely inside.
+                    </p>  
+		</div>
+</article>
+
+<!--Match-->		
+<div id="demo55">
+<p>Click the button to perfom a global search for the letters "Blue" in this sentence: Some sea animals that are characteristic are Blue Whale, Dolphin, Blue Crab, Eel, Elephant Seal.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo5"></p>
+
+<script>
+function myFunction() {
+    var str = "A list of some sea animals: Blue Whale, Dolphin, Blue Crab, Eel, Elephant Seal."; 
+    var res = str.match(/Blue/g);
+    document.getElementById("demo5").innerHTML = res;
+}
+</script>
+</div>
+
+<!--Video-->
+<div class="video2">
+<video src="video.mp4" width="390" height="290" controls> </video>
+</div>		
+<button id="btn1" onclick="changeimg()"> Click here to change the background! </button>
+
+<!--Session Storage-->
+<div id="entertext">
+<section>
+<form>
+<p>Enter Your Favorite Sea Food: </br><input type="text" id="favorite">  
+<p>The Reason Why You Like It:</br> <textarea id="reason">      </textarea></p>
+<p> <input type="button" id="button" value="Save" /></p>
+</section>
+</div>
+
+<div id="thebox">
+<section>
+Session Storage is empty!!
+</section>
+</form>
+</div>
+</section>
+
+
+</body>
+</html>

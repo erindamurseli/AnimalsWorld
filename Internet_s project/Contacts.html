@@ -1,0 +1,141 @@
+
+<html>
+<head>
+<title> Contacts </title>
+<meta charset="utf-8">
+
+<!--jQuery Hide dhe Show-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("p").hide(1000);
+    });
+	
+	$("#show").click(function(){
+    $("p").show(1000);
+});
+});
+</script>
+
+</head>
+<link rel="stylesheet" href="contacts.css">
+
+<body> 
+<header>
+<nav>
+<div id='active'>
+            <ul>
+			<li class='has-sub'><a href='index.html'><span>Home</span></a></li>
+            <li class='has-sub'><a href="mammals.html"><span>Mammals</span></a></li>
+            <li class='has-sub'><a href="insects.html"><span>Insects</span></a></li>
+            <li class='has-sub'><a href="birds.html"><span>Birds</span></a></li>
+		    <li class='has-sub'><a href="seaanimals.html"><span>Sea Animals</span></a></li>
+		    <li class='has-sub'><a href="reptiles.html"><span>Reptiles</span></a></li>
+			<li class='has-sub'><a href="contacts.html"><span>Contacts</span></a></li>
+			<li class='has-sub'><a href="donate.html"><span>Donate</span></a></li>
+            </ul>
+			</div>
+</nav>
+</header>
+
+
+<hr>
+
+<!--Perdorimi i funksioneve me me shume se dy parametra-->
+<script type="text/javascript">
+function multipleparameters (first, second) {
+   document.write("Here are our "+ first + " if you want to contact " + second + ".");
+}
+
+multipleparameters("E-mails", "us");
+</script>
+
+<!--Tabela-->
+<b><p>If you want to read more click here: <a href="#aboutus">About Us</a></p></b>
+<table>
+  <tr>
+    <th width="9%"> Name of admins </th>
+    <th width="5%"> E-mail </th>
+  </tr>
+  <tr>
+    <td> Adonis Deliu </td>
+    <td><address> <a href="mailto:adonisdeliu@gmail"> adonisdeliu@gmail.com </a></address> </td>
+  </tr>
+  <tr>
+    <td> Erinda Murseli </td>
+	<td><address> <a href="mailto:erindamurseli1@gmail"> erindamurseli1@gmail.com </a></address> </td>
+  </tr>
+  <tr>
+    <td> Mirushe Vu&ccedil;it&euml;rna </td>
+	<td><address> <a href="mailto: mirushe1v@gmail"> mirushe1v@gmail.com </a></address> </td>
+    
+  </tr>
+  <tr>
+    <td> Er&euml;blina Zogjani </td>
+    <td><address> <a href="mailto:zereblina@gmail"> zereblina@gmail.com</a></address> </td>
+  </tr>
+</table>
+<hr>
+
+<!--Harta Prishtine-->
+<figure>
+<div class="map">
+<img src="images\map.png" title="map" alt="map photo" width=300 height=300>
+<figcaption>
+<pre><strong> Note:</strong>This is our location.</pre>
+</figcaption>
+<figure>
+
+<!--Geolocation-->
+<div class ="dragzone">
+<script src="js/jsquery.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL7ohhiyIpatW5G21_MXri5ZGYdI33F2g &callback=initMap"></script>
+<script>
+     x=navigator.geolocation;
+     x.getCurrentPosition(success, failure);
+     function success(position){
+      var mylat = position.coords.latitude;
+      var mylong =  position.coords.longitude;
+
+      var coords= new google.maps.LatLng(mylat, mylong);
+
+      var mapOptions = {
+        zoom:16,
+        center:coords,
+        mapTypeid: google.maps.MapTypeId.ROADMAP
+      }
+      var map = new google.maps.Map(document.getElementById("map"),mapOptions);
+      var marker = new google.maps.Marker({map: map, position:coords});
+     }
+function failure(){
+  $('#lat').html("<p>It didnt work. Coordinates not available.</p>");
+}
+</script>
+<div id="map"></div>
+<div id="lat"></div>
+<div id="long"></div>
+</div>
+
+<!--About Us-->
+<div class="info">
+<hr>
+<h3 id="aboutus">About Us</h3>
+
+<p> We are all students of computer engineering and we worked together on building this website. 
+All of us are great animal lovers and thought there are other people who&apos;d like to see pictures 
+and informations about different animals in one place.Hopefully we achieved our goal to create a decent website with great
+information about our topic. We have put a lot of work and dedication to make it as great as possible. In the making of this website we 
+were inspired specifically from this quote " Unity is strength... when there is teamwork and collaboration, wonderful things can be achieved."
+
+</p>
+<mark> Thank You </mark>
+<br/>
+
+<!--jQuery Hide dhe Show-->
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+</div>
+</nav>
+</body>
+</html>
